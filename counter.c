@@ -5,10 +5,10 @@
 
 struct
 {
-  __unit(type, BPF_MAP_TYPE_ARRAY);
-  __unit(key, __u32);
-  __unit(value, __u64);
-  __unit(max_entries, 1);
+  __uint(type, BPF_MAP_TYPE_ARRAY);
+  __type(key, __u32);
+  __type(value, __u64);
+  __uint(max_entries, 1);
 } pkt_counter SEC(".maps");
 
 SEC("xdp")
@@ -24,6 +24,6 @@ int count_packets()
   return XDP_PASS;
 }
 
-char __license[] SEC("license") = "Dual MIT/GPL"; 
+char __license[] SEC("license") = "Dual MIT/GPL";
 
 

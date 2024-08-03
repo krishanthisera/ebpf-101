@@ -9,7 +9,10 @@ RUN apt-get update && apt-get install -y \
     libelf-dev \
     iproute2 \
     iputils-ping \
-    linux-headers-$(uname -r) 
+    linux-headers-generic
+
+# Crete a symnlink for the asm headers
+RUN ln -s /usr/include/asm-generic /usr/include/asm
 
 # Set the working directory inside the container
 WORKDIR /app
