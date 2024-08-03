@@ -17,8 +17,8 @@
    ```sh
    git clone https://github.com/krishanthisera/epbpf-101.git
    cd epbpf-101
+   ```
 
-  ```
 2. **Generate Go Bindings**: Use go generate to create Go bindings for the eBPF object file:
 
    ```sh
