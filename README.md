@@ -1,6 +1,6 @@
-# epbpf-101
+# ebpf-101
 
-`epbpf-101` is a Go-based project that demonstrates the use of eBPF (Extended Berkeley Packet Filter) for packet counting. This project includes both the eBPF C code and the Go code required to load and interact with the eBPF program.
+`ebpf-101` is a Go-based project that demonstrates the use of eBPF (Extended Berkeley Packet Filter) for packet counting. This project includes both the eBPF C code and the Go code required to load and interact with the eBPF program.
 
 ## Prerequisites
 
@@ -15,8 +15,8 @@
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/krishanthisera/epbpf-101.git
-   cd epbpf-101
+   git clone https://github.com/krishanthisera/ebpf-101.git
+   cd ebpf-101
    ```
 
 2. **Generate Go Bindings**: Use go generate to create Go bindings for the eBPF object file:
@@ -34,5 +34,5 @@
 4. **Run the Go Code**:
 
    ```sh
-   sudo ./epbpf-101
+   sudo ./ebpf-101
    ```
