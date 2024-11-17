@@ -147,7 +147,8 @@ eBPF programs can be attached to various attach points in the kernel
   - **tracepoints**: attach to a predefined tracepoint (to list tracepoints `perf list tracepoint`)
   - **perf events**: attach to a performance event (eg: cache misses, cpu cycles)
 - Security:
-  - **LSM**: attach to the Linux Security Module
+  - **LSM**: attach to a LSM hook (eg: `SEC("lsm/path_chmod")`)
+  - **seccomp**: attach to system calls, which triggers seccomp filters
 
 <!--
 - trace points are more robust than kprobes since they are less likely to change between kernel versions
@@ -296,7 +297,9 @@ The go-example provided here use libbpf and CO-RE approach
 - [eBPF labs](https://ebpf.io/labs/)
 
 ---
+
 layout: cover
+
 ---
 
 # Thank you
