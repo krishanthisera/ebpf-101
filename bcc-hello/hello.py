@@ -20,5 +20,5 @@ b = BPF(text=program)
 # execve: https://man7.org/linux/man-pages/man2/execve.2.html
 syscall = b.get_syscall_fnname("execve")
 # Blog article on linux tracing: https://jvns.ca/blog/2017/07/05/linux-tracing-systems/
-b.attach_kprobe(event=syscall, fn_name="bcc-hello")
+b.attach_kprobe(event=syscall, fn_name="hello")
 b.trace_print()

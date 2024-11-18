@@ -8,7 +8,7 @@ program = r"""
 //  https://github.com/iovisor/bcc/blob/master/docs/reference_guide.md#2-bpf_hash
 BPF_HASH(syscalls_count);
 
-int hello(void *ctx) {
+int bcc_maps(void *ctx) {
   u64 uid;
   u64 counter = 0;
   u64 *p;
@@ -39,7 +39,7 @@ b = BPF(text=program)
 # execve: https://man7.org/linux/man-pages/man2/execve.2.html
 syscall = b.get_syscall_fnname("execve")
 # Blog article on linux tracing: https://jvns.ca/blog/2017/07/05/linux-tracing-systems/
-b.attach_kprobe(event=syscall, fn_name="bcc-maps")
+b.attach_kprobe(event=syscall, fn_name="bcc_maps")
 
 
 # Print the count of syscalls for each user
