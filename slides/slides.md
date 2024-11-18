@@ -126,9 +126,9 @@ Why eBPF?
 
 - can be dynamically loaded into and removed from the kernel
 - can be attached to an event, they trigger regardless of what caused the event
-- visibility over processes
-  - on both containers and on the host machine
 - faster development cycle
+- has visibility over processes, network, and file system
+  - on both containers and the host machine
 
 ---
 
@@ -169,7 +169,7 @@ flowchart LR
 <img src="./images/ebpf-workflow.png" alt="Kernel and User Space" width="450" height="300" style="float: right; margin-left: 20px;" />
 
 - eBPF programs are written in limited C
-  - Features like loops, function calls, and variadic functions are omitted
+  - features like loops, variadic functions, function calls and etc., are omitted
 - eBPF programs are compiled to **eBPF bytecode**
 - eBPF bytecode is then compiled to machine code
 
@@ -196,10 +196,6 @@ flowchart LR
   you can't call system calls directly from eBPF program
  -->
 
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
-
 ---
 
 # eBPF Hello World
@@ -220,6 +216,7 @@ Hello world program using BCC framework
 - User space code
 
   ```python
+  #!/usr/bin/python3
   from bcc import BPF
 
   program = """Above pseudo c code"""
@@ -297,11 +294,13 @@ The go-example provided here use libbpf and CO-RE approach
 - [eBPF labs](https://ebpf.io/labs/)
 
 ---
-
 layout: cover
+
+# Thank you
 
 ---
 
 # Thank you
 
 🐝🐝🐝
+---
