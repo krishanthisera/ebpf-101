@@ -61,7 +61,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 Quick summary of the kernel and user space:
 
-<img src="./images/kernel-userspace.png" alt="Kernel and User Space" width="450" height="250" style="float: right; margin-left: 20px;" />
+<img src="./images/kernel-userspace.png" alt="ebpf 101" width="450" height="250" style="float: right; margin-left: 20px;" />
 
 - **Kernel**:
   - the core of the operating system
@@ -81,13 +81,13 @@ Quick summary of the kernel and user space:
 strace -c echo "hello"
 ```
 
-<img src="./images/echo-systemcall.png" alt="Kernel and User Space" width="450" height="250" style="float: center; margin-left: 100px;margin-top: 30px;" />
+<img src="./images/echo-systemcall.png" alt="ebpf 101" width="450" height="250" style="float: center; margin-left: 100px;margin-top: 30px;" />
 
 ---
 
 # Introduction | Adding a feature to the Kernel
 
-<img src="./images/pr-to-upstream.png" alt="Kernel and User Space" width="450" height="250" style="float: right; margin-left: 20px;" />
+<img src="./images/pr-to-upstream.png" alt="ebpf 101" width="450" height="250" style="float: right; margin-left: 20px;" />
 
 - Adding a feature to the upstream
   - requires kernel development skills
@@ -107,7 +107,7 @@ strace -c echo "hello"
   - distribute independently of the official Linux kernel release
   - not need to be accepted into the main upstream maintainers
 
-<img src="./images/kernel-module.png" alt="Kernel and User Space" width="300" height="250" style="float: right; margin-left: 20px;" />
+<img src="./images/kernel-module.png" alt="ebpf 101" width="300" height="250" style="float: right; margin-left: 20px;" />
 
 - **Writing a Kernel modules**
   - requires kernel development knowledge
@@ -122,7 +122,7 @@ strace -c echo "hello"
 
 Why eBPF?
 
-<img src="./images/ebpf-development.png" alt="Kernel and User Space" width="400" height="300" style="float: right; margin-left: 20px;" />
+<img src="./images/ebpf-development.png" alt="ebpf 101" width="400" height="300" style="float: right; margin-left: 20px;" />
 
 - can be dynamically loaded into and removed from the kernel
 - can be attached to an event, they trigger regardless of what caused the event
@@ -136,7 +136,7 @@ Why eBPF?
 
 eBPF programs can be attached to various attach points in the kernel
 
-<img src="./images/network-attachments.png" alt="Kernel and User Space" width="400" height="300" style="float: right; margin-left: 20px; margin-top: 50px" />
+<img src="./images/network-attachments.png" alt="ebpf 101" width="400" height="300" style="float: right; margin-left: 20px; margin-top: 50px" />
 
 - Networking:
   - **XDP**: attach to the network interface
@@ -166,7 +166,7 @@ flowchart LR
 ```
 </div>
 
-<img src="./images/ebpf-workflow.png" alt="Kernel and User Space" width="450" height="300" style="float: right; margin-left: 20px;" />
+<img src="./images/ebpf-workflow.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
 
 - eBPF programs are written in limited C
   - features like loops, variadic functions, function calls and etc., are omitted
@@ -177,7 +177,7 @@ flowchart LR
 
 # BPF Program anatomy
 
-<img src="./images/ebpf-workflow.png" alt="Kernel and User Space" width="400" height="300" style="float: right; margin-left: 20px;" />
+<img src="./images/ebpf-workflow.png" alt="ebpf 101" width="400" height="300" style="float: right; margin-left: 20px;" />
 
 - **eBPF bytecode**
   - compiled from eBPF source code
@@ -240,7 +240,7 @@ Hello world program using BCC framework
 
 A data structure that both user space and ebpf program can access
 
-<img src="./images/ebpf-maps.png" alt="Kernel and User Space" width="450" height="300" style="float: right; margin-left: 20px;" />
+<img src="./images/ebpf-maps.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
 
 - Through maps eBPF programs can share data with user space
   - Configuration
@@ -257,7 +257,7 @@ A data structure that both user space and ebpf program can access
 
 An example usage of eBPF in networking leveraging XDP (eXpress Data Path)
 
-<img src="./images/xdp-flow.png" alt="Kernel and User Space" width="450" height="300" style="float: right; margin-left: 20px;" />
+<img src="./images/xdp-flow.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
 
 - a kernel feature that allows to run eBPF programs at the earliest stage of packet processing
 - The XDP program attach to specific network interfaces
