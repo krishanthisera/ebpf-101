@@ -142,7 +142,7 @@ eBPF programs can be attached to various attach points in the kernel
   - **XDP**: attach to the network interface
   - **TC**: attach to the traffic control subsystem
 - Tracing:
-  - **kprobes**: tap into arbitrary kernel functions/code
+  - **kprobes**: tap into arbitrary kernel functions/code (eg: `SEC("kprobe/__arm64_sys_execve")`)
   - **uprobes**: tap into user-space functions (user needs to link the function with uprobes)
   - **tracepoints**: attach to a predefined tracepoint (to list tracepoints `perf list tracepoint`)
   - **perf events**: attach to a performance event (eg: cache misses, cpu cycles)
