@@ -6,7 +6,7 @@ The repository contains the learning materials for eBPF 101 presentation.
 
 Required packages: clang, llvm, libelf-dev, libpcap-dev, build-essential, make, linux-tools-common, gcc-multilib, libbpf-dev, python3
 
-To install the required packages, run the following commands:
+To install the required packages:
 
 ```bash
   apt install -y clang \ 
