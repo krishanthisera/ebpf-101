@@ -10,7 +10,7 @@ int hello(void *ctx) {
 
   // Print the trace message to the trace log of the kernel
   //  https://docs.ebpf.io/linux/helper-function/bpf_trace_printk/
-  bpf_trace_printk("Hello World! UID: %d", uid);
+  bpf_trace_printk("hello UID: %d", uid);
 return 0;
 }
 """
