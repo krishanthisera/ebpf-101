@@ -152,6 +152,7 @@ eBPF programs can be attached to various attach points in the kernel
 
 <!--
 - trace points are more robust than kprobes since they are less likely to change between kernel versions
+- Libpf make it easier to byt letting us use SEC("ksyscall/execve") so we don't have to be specific like kprobe/__arm64_sys_execve
 -->
 
 ---
