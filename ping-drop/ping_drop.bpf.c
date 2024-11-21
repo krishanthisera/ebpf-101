@@ -51,6 +51,6 @@ int ping_drop(struct xdp_md *ctx)
   return XDP_DROP;
 }
 
-// verifier also checks that if we are using a BPF helper function that’s licensed
+// verifier also checks that if we are using a BPF helper function that's licensed
 // There are some helper functions that are GPL-only, and some that are under the GPL-compatible license
 char _license[] SEC("license") = "GPL";

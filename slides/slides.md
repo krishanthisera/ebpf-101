@@ -170,7 +170,7 @@ flowchart LR
 <img src="./images/ebpf-workflow.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
 
 - eBPF programs are written in limited C
-  - features like loops, variadic functions, function calls and etc., are omitted
+  - features like loops are omitted
 - eBPF programs are compiled to **eBPF bytecode**
 - eBPF bytecode is then compiled to machine code
 
@@ -184,12 +184,12 @@ flowchart LR
   - compiled from eBPF source code
 - **Verifier**
   - analyzes the program to assess all possible execution paths
-  - see if eBPF program wouldn't crach during the runtime
+  - see if eBPF program wouldn't crash during the runtime
   - state pruning capabilities to reduce the number of states to be analyzed
 - **JIT Compiler**
   - converts bytecode to native machine code to run on targeted machine
 - **eBPF virtual machine**
-  - like any other virtual machine, virtual implementation of a computer
+  - like any other virtual machine
   - compiled eBPF bytecode contains instructions
 
 <!--
@@ -239,7 +239,7 @@ Hello world program using BCC framework
 
 # eBPF maps
 
-A data structure that both user space and ebpf program can access
+A data structure that both user space and eBPF program can access
 
 <img src="./images/ebpf-maps.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
 
@@ -272,9 +272,8 @@ An example usage of eBPF in networking leveraging XDP (eXpress Data Path)
 - Problem with BCC's approach
 
   - compilation toolchain needs to be installed on every destination machine
-  - need to wait for the compilation process to finish
   - need to compile the eBPF program on the destination machine
-  - linux headers required be installed on the destination machine, which container images can't solved
+  - linux headers required be installed on the destination machine, which container images can't solve
 
 - CO-RE / libbpf (Compile Once, Run Everywhere) approach
   - directly use the libbpf library provided by kernel developers
