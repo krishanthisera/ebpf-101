@@ -44,6 +44,23 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
+# Agenda
+
+<img src="./images/bee.png" alt="ebpf 101" width="250" height="300" style="float: right;" />
+
+- Introduction
+  - Kernel and User space
+  - Kernel development
+  - Introduction to eBPF
+- eBPF Attach Points
+- BPF Program anatomy
+- eBPF Example
+  - Hello World example
+  - eBPF maps example
+  - eBPF network example
+
+---
+
 # Introduction
 
 - ePPF, stands for **extended Berkeley Packet Filter**
@@ -93,8 +110,8 @@ strace -c echo "hello"
   - requires kernel development skills
   - requires kernel recompilation
   - long process
-    - create a MR and get it reviewed
-    - wait for the MR to be added to upstream
+    - create PR and get it reviewed
+    - wait for the PR to be added to upstream
     - wait for the next kernel release
     - wait for the specific distribution to include the new kernel
 
@@ -241,7 +258,7 @@ Hello world program using BCC framework
 
 A data structure that both user space and eBPF program can access
 
-<img src="./images/ebpf-maps.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
+<img src="./images/bcc-maps.png" alt="ebpf 101" width="450" height="300" style="float: right; margin-left: 20px;" />
 
 - Through maps eBPF programs can share data with user space
   - Configuration
@@ -292,6 +309,7 @@ The go-example provided here use libbpf and CO-RE approach
 
 - [Learning eBPF by Liz Rice](https://isovalent.com/books/learning-ebpf/)
 - [eBPF labs](https://ebpf.io/labs/)
+- [eBPF docs](https://ebpf.io/)
 
 ---
 layout: cover
